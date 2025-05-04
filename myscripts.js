@@ -1,8 +1,9 @@
 const container = document.querySelector('div.container');
 const startButton = document.querySelector('button.start');
-startButton.addEventListener("click", createSquares());
+startButton.addEventListener("click", createSquares);
 
 function createSquares() {
+    container.innerHTML = '';
     let numSquares = prompt("How many rows/columns would you like? (Max: 100)");
     for (let i = 0; i < numSquares * numSquares; i++) {
         let square = document.createElement('div');
