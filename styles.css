@@ -31,12 +31,7 @@ div.container {
     height: 100%;
 }
 
-div.container > div.squareBlue {
-    background-color: blue;
-    color: white;
-}
-
-div.container > div.squareRed {
-    background-color: red;
+div.square {
+    background-color: black;
     color: white;
 }

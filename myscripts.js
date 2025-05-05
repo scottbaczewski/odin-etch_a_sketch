@@ -13,14 +13,18 @@ function start() {
     }
 }
 
+function getRandomColorHex() {
+    return '#' + Math.floor(Math.random()*16777215).toString(16);
+}
+
 function createSquares(num) {
     for (let i = 0; i < num * num; i++) {
         let square = document.createElement('div');
-        square.setAttribute("class", "squareBlue");
+        square.setAttribute("class", "square");
         square.setAttribute("style", `height:${(1 / num) * 100}%`);
         square.setAttribute("style", `width:${(1 / num) * 100}%`);
         square.addEventListener("mouseover", () => {
-            square.className = 'squareRed';
+            square.style.backgroundColor = getRandomColorHex();
         })
     container.appendChild(square);
     }
