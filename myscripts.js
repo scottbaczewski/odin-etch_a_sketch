@@ -19,12 +19,17 @@ function getRandomColorHex() {
 
 function createSquares(num) {
     for (let i = 0; i < num * num; i++) {
+        let newColor = getRandomColorHex();
         let square = document.createElement('div');
         square.setAttribute("class", "square");
         square.setAttribute("style", `height:${(1 / num) * 100}%`);
         square.setAttribute("style", `width:${(1 / num) * 100}%`);
+        let counter = 0;
         square.addEventListener("mouseover", () => {
-            square.style.backgroundColor = getRandomColorHex();
+            square.style.backgroundColor = newColor;
+            square.style.opacity = (1 - (.1 * counter));
+            counter++;
+            // square.textContent = counter;
         })
     container.appendChild(square);
     }
