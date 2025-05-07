@@ -20,6 +20,12 @@ body {
     background-color: black;
 }
 
+div.all {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
 div.title {
     display: flex;
     flex-direction: column;
@@ -30,7 +36,7 @@ div.title {
 div.container {
     display: flex;
     flex-flow: row wrap;
-    height: 100%;
+    flex: 1;
 }
 
 div.square {
